@@ -25,7 +25,6 @@ public class JokesServiceImplTest {
     @Test
     public void getJoke(){
         when(chuckNorrisQuotes.getRandomQuote()).thenReturn("test");
-        jokesService.setChuckNorrisQuotes(chuckNorrisQuotes);
 
         assertThat(jokesService.getJoke()).isEqualToIgnoringCase("test");
     }
